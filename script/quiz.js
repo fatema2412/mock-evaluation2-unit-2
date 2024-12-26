@@ -37,7 +37,7 @@ async function getData(){
        },
     })
     let data= await res.json()
-       console.log(data)
+    //    console.log(data)
        displayData(data)
     }
     catch (error){
@@ -63,14 +63,14 @@ async function getData(){
  let confirmDelete = confirm("Are you sure you want to delete this question?");
  if(confirmDelete){
    try{
-   await fetch(`${baseUrl}/quiz}/ele.id`,{
+   await fetch(`${baseUrl}/quiz}`,{
     method :"DELETE",
     headers :{
         "content-type":"application/json"    
     }
-
    })
    getData()
+   console.log(data )
    }
    catch(erro){
     console.log(erro)
